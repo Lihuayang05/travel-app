@@ -76,7 +76,6 @@ input {
 
 .list {
   background-color: #B3D6C6;
-  color: #ffffff;
   padding: 1rem 0;
   display: flex;
   justify-content: center;
@@ -114,6 +113,7 @@ input {
   background-color: #4657c6; 
   padding: 2rem;
   border-radius: 1rem; 
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -221,6 +221,7 @@ input[type="checkbox"] {
   color: #888;
 }
 
+
 @media (max-width: 768px) {
   .list-controls {
     flex-direction: column; 
@@ -271,4 +272,59 @@ input[type="checkbox"] {
   input {
     font-size: 1.4rem;
   }
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+  font-size: 2rem;
+  color: #1e3a8a; 
+  text-align: left; 
+  position: absolute;
+  top: 1rem;
+  left: 1rem; 
+  padding: 1rem 1.5rem;
+  background-color: #e0f7fa; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+  gap: 1rem; 
+  max-width: 100%; 
+  white-space: nowrap; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Hover effect */
+.countdown-timer:hover {
+  transform: scale(1.05); 
+  cursor: pointer; 
+}
+
+/* Time Unit Styling (Days, Hours, Minutes, Seconds) */
+.countdown-timer span {
+  font-weight: bold;
+  color: #0277bd;
+  white-space: nowrap; 
+  padding: 0.5rem 1rem; 
+  border-radius: 5px; 
+  background-color: #b3e5fc; 
+}
+
+/* Countdown Timer Input (When Editing the Date) */
+.countdown-timer input[type="date"] {
+  padding: 0.5rem 1rem; 
+  border: 2px solid #81d4fa; 
+  border-radius: 5px; 
+  font-size: 2rem; 
+  background-color: #b3e5fc; 
+  width: auto; 
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease; 
+}
+
+/* Input focus styling */
+.countdown-timer input[type="date"]:focus {
+  border-color: #4fc3f7; 
+  outline: none; 
 }

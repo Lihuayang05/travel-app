@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Form from "./Form";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
+import CountdownTimer from './CountdownTimer';
 
 // Initial packing items
 const initialItems = [
@@ -16,6 +17,8 @@ function App() {
   const [items, setItems] = useState(initialItems);
   const [searchText, setSearchText] = useState("");
   const [sortBy, setSortBy] = useState("name");
+
+  const tripDate = "2024-12-15T08:30:00";  
 
   const addItem = (newItem) => {
     setItems((prevItems) => [
@@ -54,6 +57,11 @@ function App() {
     <div className="app">
       <Logo />
       <Form addItem={addItem} />
+    
+      <div className="countdown-container">
+        <CountdownTimer targetDate={tripDate} />
+      </div>
+
       <PackingList
         items={items}
         togglePacked={togglePacked}
@@ -63,8 +71,9 @@ function App() {
         sortBy={sortBy}
         setSortBy={setSortBy}
         clearAllItems={clearAllItems}
-        updateItem = {updateItem}
+        updateItem={updateItem}
       />
+      
       <Stats items={items} />
     </div>
   );
