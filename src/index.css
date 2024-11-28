@@ -107,20 +107,20 @@ input {
 
 .list li {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 1.2rem;
-  background-color: #4657c6; 
-  padding: 2rem;
-  border-radius: 1rem; 
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem; 
+  background-color: #4657c6;
+  padding: 1.5rem; 
+  border-radius: 1rem;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-3px); 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
 }
+
 
 input[type="checkbox"] {
   height: 2rem;
@@ -331,3 +331,4 @@ input[type="checkbox"] {
 div.countdown-container{
   background:#B3D6C6;
 }
+
