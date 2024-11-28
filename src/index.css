@@ -276,23 +276,24 @@ input[type="checkbox"] {
 
 /* Countdown Timer Styles */
 .countdown-timer {
-  font-size: 2rem;
+  font-size: 1.5rem;  /* Reduced font size */
   color: #1e3a8a; 
   text-align: left; 
-  position: absolute;
-  top: 1rem;
-  left: 1rem; 
-  padding: 1rem 1.5rem;
+  position: fixed;  
+  top: 1rem;       
+  left: 1rem;      
+  padding: 0.5rem 1rem;  /* Reduced padding */
   background-color: #e0f7fa; 
   border-radius: 10px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   display: flex;
   align-items: center; 
   justify-content: flex-start;
-  gap: 1rem; 
+  gap: 0.75rem;  /* Reduced gap */
   max-width: 100%; 
   white-space: nowrap; 
   transition: transform 0.3s ease-in-out; 
+  z-index: 9999;  
 }
 
 /* Hover effect */
@@ -306,17 +307,17 @@ input[type="checkbox"] {
   font-weight: bold;
   color: #0277bd;
   white-space: nowrap; 
-  padding: 0.5rem 1rem; 
+  padding: 0.25rem 0.5rem;  /* Reduced padding */
   border-radius: 5px; 
   background-color: #b3e5fc; 
 }
 
 /* Countdown Timer Input (When Editing the Date) */
 .countdown-timer input[type="date"] {
-  padding: 0.5rem 1rem; 
+  padding: 0.25rem 0.5rem;  /* Reduced padding */
   border: 2px solid #81d4fa; 
   border-radius: 5px; 
-  font-size: 2rem; 
+  font-size: 1.5rem;  /* Reduced font size */
   background-color: #b3e5fc; 
   width: auto; 
   box-sizing: border-box; 
@@ -327,4 +328,7 @@ input[type="checkbox"] {
 .countdown-timer input[type="date"]:focus {
   border-color: #4fc3f7; 
   outline: none; 
+}
+div.countdown-container{
+  background:#B3D6C6;
 }

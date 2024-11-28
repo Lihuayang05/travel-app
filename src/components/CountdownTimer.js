@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 function CountdownTimer() {
-  const [travelDate, setTravelDate] = useState(new Date("2024-12-31")); 
+  const [travelDate, setTravelDate] = useState(new Date("2024-12-31"));
   const [timeLeft, setTimeLeft] = useState({});
-  const [editingDate, setEditingDate] = useState(false); 
+  const [editingDate, setEditingDate] = useState(false);
 
   const calculateTimeLeft = (date) => {
     const now = new Date();
@@ -25,7 +25,7 @@ function CountdownTimer() {
       setTimeLeft(calculateTimeLeft(travelDate));
     }, 1000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [travelDate]);
 
   const handleTimerClick = () => {
@@ -34,11 +34,11 @@ function CountdownTimer() {
 
   const handleDateChange = (event) => {
     setTravelDate(new Date(event.target.value));
-    setEditingDate(false); 
+    setEditingDate(false);
   };
 
   return (
-    <div className="list">
+    <div className="countdown-container">
       <div className="countdown-timer" onClick={handleTimerClick}>
         {!editingDate ? (
           <>
@@ -51,7 +51,7 @@ function CountdownTimer() {
           <input
             type="date"
             onChange={handleDateChange}
-            value={travelDate.toISOString().split("T")[0]} 
+            value={travelDate.toISOString().split("T")[0]}
           />
         )}
       </div>

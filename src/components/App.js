@@ -10,7 +10,7 @@ const initialItems = [
   { id: 1, description: "Shirt", quantity: 5, category:"Toiletries", packed: false },
   { id: 2, description: "Pants", quantity: 2, category:"Clothing", packed: false },
   { id: 3, description: "Toothbrush", quantity: 1, category:"Toiletries", packed: false },
-  { id: 4, description: "Socks", quantity: 3,  category:"Clothing",packed: false },
+  { id: 4, description: "Socks", quantity: 3, category:"Clothing", packed: false },
 ];
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [sortBy, setSortBy] = useState("name");
 
+  // Define a fixed trip date (it won't be affected by clearing items)
   const tripDate = "2024-12-15T08:30:00";  
 
   const addItem = (newItem) => {
@@ -40,7 +41,7 @@ function App() {
   };
 
   const clearAllItems = () => {
-    setItems([]);
+    setItems([]); // Clear the items, but keep the countdown timer intact
   };
 
   const updateItem = (id, newDescription, newQuantity, newCategory) => {
@@ -57,7 +58,8 @@ function App() {
     <div className="app">
       <Logo />
       <Form addItem={addItem} />
-    
+
+      {/* Countdown Timer will always be displayed regardless of clearing items */}
       <div className="countdown-container">
         <CountdownTimer targetDate={tripDate} />
       </div>
