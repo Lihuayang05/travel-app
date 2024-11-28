@@ -312,23 +312,22 @@ input[type="checkbox"] {
   background-color: #b3e5fc; 
 }
 
-/* Countdown Timer Input (When Editing the Date) */
 .countdown-timer input[type="date"] {
-  padding: 0.25rem 0.5rem;  /* Reduced padding */
-  border: 2px solid #81d4fa; 
-  border-radius: 5px; 
-  font-size: 1.5rem;  /* Reduced font size */
-  background-color: #b3e5fc; 
-  width: auto; 
-  box-sizing: border-box; 
-  transition: border-color 0.3s ease; 
+  padding: 0.5rem;
+  border: 2px solid #81d4fa;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: #b3e5fc;
+  width: auto;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-/* Input focus styling */
 .countdown-timer input[type="date"]:focus {
-  border-color: #4fc3f7; 
-  outline: none; 
+  border-color: #4fc3f7;
+  outline: none;
 }
+
 div.countdown-container{
   background:#B3D6C6;
 }
