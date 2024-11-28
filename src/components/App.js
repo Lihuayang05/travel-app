@@ -57,6 +57,10 @@ function App() {
     <div className="app">
       <Logo />
       <Form addItem={addItem} />
+    
+      <div className="countdown-container">
+        <CountdownTimer targetDate={tripDate} />
+      </div>
 
       <PackingList
         items={items}
